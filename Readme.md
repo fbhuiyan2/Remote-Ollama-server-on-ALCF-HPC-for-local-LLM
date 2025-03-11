@@ -10,7 +10,7 @@ This guide provides step-by-step instructions to connect the [MSTY](https://msty
 ## Prerequisites
 
 - **ALCF Account**: Ensure you have an active account with access to ALCF supercomputers (in this case, Sophia)
-- **Ollama**: Installed on one of your project directories on ALCF
+- **Ollama**: Installed on one of your project directories on ALCF. Installation directions are provided [here](https://github.com/fbhuiyan2/Remote-Ollama-server-on-ALCF-HPC-for-local-LLM/blob/main/Install%20Ollama%20on%20ALCF%20HPC.md)
 - **MSTY app**: Installed on your local machine
 
 ## Steps
