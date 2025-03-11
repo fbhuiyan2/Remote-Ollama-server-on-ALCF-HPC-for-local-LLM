@@ -42,7 +42,7 @@ export OLLAMA_HOST=0.0.0.0:11434 ollama serve &
 
 ```bash
 HOSTNAME=$(hostname -f)
-echo -e " ssh -N -L 8888:${HOSTNAME}:$11434 username@sophia.alcf.anl.gov 
+echo -e " ssh -N -L 8888:${HOSTNAME}:$11434 username@sophia.alcf.anl.gov"
 ```
 
 Copy the printed line. Note, 8888 is the port number on your pc and username is your username for ALCF.
