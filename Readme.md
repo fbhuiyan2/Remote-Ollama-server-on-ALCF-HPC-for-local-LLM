@@ -32,7 +32,7 @@ Wait until the job is scheduled and you are placed into an interactive session o
 - Once on the compute node, start the Ollama server in the background:
 
 ```bash
-export OLLAMA_HOST=0.0.0.0:11434 ollama serve &
+OLLAMA_HOST=0.0.0.0:11434 OLLAMA_KEEP_ALIVE=-1 ollama serve &
 ```
 
 `OLLAMA_HOST=0.0.0.0:11434` Configures Ollama to listen on all network interfaces on port `11434`. This overrides the default 127.0.0.0 which does not listen to outside networks and thus, cannot be used for remote Ollama purposes.
