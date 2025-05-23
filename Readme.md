@@ -32,10 +32,14 @@ Wait until the job is scheduled and you are placed into an interactive session o
 - Once on the compute node, start the Ollama server in the background:
 
 ```bash
-OLLAMA_HOST=0.0.0.0:11434 OLLAMA_KEEP_ALIVE=-1 ollama serve &
+OLLAMA_HOST=0.0.0.0:11434 OLLAMA_KEEP_ALIVE=-1 OLLAMA_CONTEXT_LENGTH=16000 ollama serve &
 ```
 
 `OLLAMA_HOST=0.0.0.0:11434` Configures Ollama to listen on all network interfaces on port `11434`. This overrides the default 127.0.0.0 which does not listen to outside networks and thus, cannot be used for remote Ollama purposes.
+
+`OLLAMA_KEEP_ALIVE=-1` is used to keep the server running indefinitely (default is like 10 minutes or so). 
+
+`OLLAMA_CONTEXT_LENGTH=16000` is used to increase the context window to 16k tokens (current default is 4k tokens).
 
 
 - Get the fully qualified domain name (FQDN) of the compute node (i.e. Compute Node Hostname):
